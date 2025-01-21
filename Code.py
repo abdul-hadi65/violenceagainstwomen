@@ -34,3 +34,10 @@ plt.title('Average Value by Country and Gender')
 plt.ylabel('Country')
 plt.xlabel('Gender')
 plt.show()
+
+# Visualization 4: Pie chart of gender distribution
+gender_counts = data_cleaned['Gender'].value_counts()
+plt.figure(figsize=(8, 8))
+plt.pie(gender_counts, labels=gender_counts.index, autopct='%1.1f%%', startangle=140, colors=['#ff9999','#66b3ff'])
+plt.title('Gender Distribution')
+plt.show()
