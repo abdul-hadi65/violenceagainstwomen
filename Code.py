@@ -17,3 +17,11 @@ plt.title('Average Survey Value by Gender')
 plt.ylabel('Average Value')
 plt.xlabel('Gender')
 plt.show()
+
+# Visualization 2: Distribution of Values by Gender using Boxplot
+plt.figure(figsize=(10, 6))
+sns.boxplot(x='Gender', y='Value', data=data_cleaned, palette='Set2')
+plt.title('Distribution of Values by Gender')
+plt.ylabel('Value')
+plt.xlabel('Gender')
+plt.show()
