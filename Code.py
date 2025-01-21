@@ -25,3 +25,12 @@ plt.title('Distribution of Values by Gender')
 plt.ylabel('Value')
 plt.xlabel('Gender')
 plt.show()
+
+# Visualization 3: Heatmap of Value by Country and Gender
+pivot_table = data_cleaned.pivot_table(index='Country', columns='Gender', values='Value', aggfunc='mean')
+plt.figure(figsize=(12, 8))
+sns.heatmap(pivot_table, annot=True, fmt='.1f', cmap='coolwarm', cbar=True)
+plt.title('Average Value by Country and Gender')
+plt.ylabel('Country')
+plt.xlabel('Gender')
+plt.show()
